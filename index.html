@@ -69,8 +69,32 @@
     });
 
     canvas.addEventListener('touchstart', (e) => {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
         isDrawing = true;
         [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+    
+    canvas.addEventListener('touchmove', (e) => {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+        draw
+    });
+    
+    canvas.addEventListener('touchend', (e) => {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+        isDrawing = false;
+    });
+    
+    canvas.addEventListener('touchcancel', (e) => {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+        isDrawing = false;
     });
 
 
@@ -78,9 +102,6 @@
     canvas.addEventListener('mouseup', () => isDrawing = false);
     canvas.addEventListener('mouseout', () => isDrawing = false);
     
-    canvas.addEventListener('touchmove', draw);
-    canvas.addEventListener('touchend', () => isDrawing = false);
-    canvas.addEventListener('touchcancel', () => isDrawing = false);
 </script>
 
 
