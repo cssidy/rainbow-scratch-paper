@@ -1,2 +1,2 @@
 # rainbow-scratch-paper
-Rainbow scratch paper with HTML5 Canvas
+Rainbow scratch paper with HTML5 Canvas.
